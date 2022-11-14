@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuotesApp.Pages.AddEquipmentPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Entry Text="{Binding Name}" Placeholder="Name"/>
+            <Entry Text="{Binding Status}" Placeholder="Status"/>
+            <Entry Text="{Binding StatusName}" Placeholder="Status"/>
+            <Entry Text="{Binding Type}" Placeholder="type"/>
+            <Entry Text="{Binding Quantity}" Placeholder="quantity"/>
+            <Entry Text="{Binding TypeName}" Placeholder="Status"/>
+            <Button CornerRadius="35" BackgroundColor="Black" TextColor="White" Text="Save" Command="{Binding AddEquipmentCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuotesApp.Pages.EquipmentPage"
+             Title="Equipment List"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="plus.jpg" Command="{Binding AddEquipmentCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <ListView HasUnevenRows="True" ItemsSource="{Binding Equipments}" SelectedItem="{Binding SelectedEquipment}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="AliceBlue" Padding="20">
+                                <Label Text="{Binding Name}" TextColor="black" FontSize="Large"/>
+                                <Label Text="{Binding StatusName}" TextColor="blue" FontSize="Large"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="red" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

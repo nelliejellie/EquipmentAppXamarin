@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuotesApp.Pages.EquipmentDetailPage"
+             Title="Equipment Details"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" HasShadow="False" Padding="20">
+                <StackLayout Spacing="20" Padding="10">
+                    <Label FontSize="Medium" TextColor="Aquamarine" Text="{Binding Equipment.Id}"/>
+                    <Label FontSize="Small" TextColor="DarkRed" Text="{Binding Equipment.Name}"/>
+                    <Label FontSize="Small" TextColor="DarkRed" Text="{Binding Equipment.Status}"/>
+                    <Label FontSize="Small" TextColor="DarkRed" Text="{Binding Equipment.StatusName}"/>
+                    <Label FontSize="Small" TextColor="DarkRed" Text="{Binding Equipment.Quantity}"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout BackgroundColor="white" Orientation="Horizontal" Margin="20" Spacing="50" HorizontalOptions="CenterAndExpand">
+                <ImageButton Command="{Binding CopyEquipmentCommand}" BackgroundColor="Gray" Source="copy.png" WidthRequest="40" HeightRequest="40"/>
+                <ImageButton Command="{Binding ShareEquipmentCommand}" BackgroundColor="Gray" Source="share.png" WidthRequest="40" HeightRequest="40"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
